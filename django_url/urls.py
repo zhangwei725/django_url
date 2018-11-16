@@ -1,6 +1,8 @@
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from view01 import views
+
 '''
 
 '''
@@ -13,7 +15,10 @@ from django.contrib import admin
 
 urlpatterns = [
     url('admin/', admin.site.urls),
+    # 访问根域名默认的显示界面
+    url('^$', views.index),
+    # 2.0以上的写法
+    # path('', views.index),
     url('view01/', include('view01.urls')),
     url('view02/', include('view02.urls')),
-
 ]

@@ -18,6 +18,10 @@ from django.shortcuts import render
 from view01.models import TFilm, Girl
 
 
+def index(request):
+    return render(request, 'index.html')
+
+
 def req(request):
     # request.GET
     # request.POST
@@ -156,10 +160,3 @@ def load_data(request):
         girls.append(girl)
     Girl.objects.bulk_create(girls)
     return HttpResponse('so easy!!!!')
-
-
-
-
-
-
-
