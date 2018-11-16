@@ -25,3 +25,27 @@ class TFilm(models.Model):
 
     class Meta:
         db_table = 't_film'
+
+
+"""
+        "_id": "5be14edb9d21223dd50660f8",
+        "createdAt": "2018-11-06T08:20:43.656Z",
+        "desc": "2018-11-06",
+        "publishedAt": "2018-11-06T00:00:00.0Z",
+        "source": "web",
+        "type": "福利",
+        "url": "https://ws1.sinaimg.cn/large/0065oQSqgy1fwyf0wr8hhj30ie0nhq6p.jpg",
+        "used": true,
+        "who": "lijinshanmx"
+
+"""
+
+
+class Girl(models.Model):
+    created_date = models.CharField(max_length=255)
+    desc = models.CharField(max_length=255)
+    published = models.CharField(max_length=255)
+    source = models.CharField(max_length=20, null=True)
+    type = models.CharField(max_length=30)
+    url = models.CharField(max_length=255)
+    used = models.BooleanField(default=True)
